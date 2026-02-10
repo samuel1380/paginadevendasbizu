@@ -346,6 +346,71 @@
         </div>
     </section>
 
+    <!-- App Demo Video Section -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 px-2">Veja o Bizu por dentro</h2>
+                <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">Conheça a interface e as funcionalidades que vão acelerar sua aprovação.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto flex flex-col items-center">
+                <div class="relative w-[280px] sm:w-[320px] aspect-[9/16] bg-slate-900 rounded-[2.5rem] sm:rounded-[3rem] shadow-2xl overflow-hidden border-[8px] sm:border-[12px] border-slate-900 group">
+                    <video 
+                        id="demo-video"
+                        class="absolute inset-0 w-full h-full object-cover" 
+                        poster="assets/img/logo.png"
+                        preload="metadata"
+                        loop
+                        playsinline>
+                        <source src="assets/video/demonstracao.mp4" type="video/mp4">
+                        Seu navegador não suporta a reprodução de vídeos.
+                    </video>
+                    <!-- Mute/Unmute Toggle -->
+                    <button id="mute-toggle" class="absolute bottom-6 right-6 z-20 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full backdrop-blur-md transition-all">
+                        <i data-lucide="volume-x" class="w-5 h-5" id="mute-icon"></i>
+                    </button>
+                    <!-- Play Overlay -->
+                    <div id="video-overlay" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-all cursor-pointer">
+                        <div class="w-16 h-16 bg-bizu-blue/90 rounded-full flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                            <i data-lucide="play" class="w-8 h-8 text-white fill-current ml-1" id="play-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 sm:mt-16">
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                        <div class="bg-blue-100 p-2 rounded-xl text-bizu-blue">
+                            <i data-lucide="layout" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Interface Fluida</h4>
+                            <p class="text-xs text-slate-500 mt-1">Design focado em produtividade.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                        <div class="bg-blue-100 p-2 rounded-xl text-bizu-blue">
+                            <i data-lucide="smartphone" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">100% Mobile</h4>
+                            <p class="text-xs text-slate-500 mt-1">Estude de onde quiser, quando quiser.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                        <div class="bg-blue-100 p-2 rounded-xl text-bizu-blue">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">IA Integrada</h4>
+                            <p class="text-xs text-slate-500 mt-1">Mentor inteligente em cada tela.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="funcionalidades" class="py-16 sm:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
@@ -519,43 +584,9 @@
             </div>
 
             <div class="grid md:grid-cols-2 max-w-4xl mx-auto gap-8 lg:gap-12 px-2 sm:px-0">
-                <!-- Free Trial Plan -->
-                <div
-                    class="p-8 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-white border-2 border-slate-100 hover:border-bizu-blue transition-all flex flex-col group order-2 md:order-1">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-2">Teste Grátis</h3>
-                    <div class="text-3xl sm:text-4xl font-extrabold mb-6">Grátis<span
-                            class="text-base sm:text-lg text-slate-400 font-normal"> / 3 dias</span></div>
-                    <ul class="space-y-3 sm:space-y-4 mb-8 sm:mb-10 flex-grow text-sm sm:text-base">
-                        <li class="flex items-center gap-3 text-slate-600">
-                            <i data-lucide="message-square" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Mentor IA
-                            Ilimitado
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-600">
-                            <i data-lucide="book-open" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Biblioteca de
-                            Materiais
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-600">
-                            <i data-lucide="zap" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Treinar Questões e
-                            Simulados
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-600">
-                            <i data-lucide="calendar" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Rotina e
-                            Cronograma
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-600">
-                            <i data-lucide="radar" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Radar de Concursos
-                            2026
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/556193357433?text=Oi,%20quero%20o%20acesso%20imediato%20ao%20Bizu%20com%203%20dias%20gr%C3%A1tis"
-                        target="_blank"
-                        class="w-full border-2 border-bizu-blue text-bizu-blue font-bold py-3.5 sm:py-4 rounded-xl sm:rounded-2xl hover:bg-blue-50 transition-all text-center text-sm sm:text-base">Começar
-                        Teste Grátis</a>
-                </div>
-
                 <!-- Monthly Plan (Featured) -->
                 <div
-                    class="p-8 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-slate-900 text-white shadow-2xl shadow-blue-200 relative overflow-hidden flex flex-col scale-100 md:scale-105 order-1 md:order-2">
+                    class="p-8 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-slate-900 text-white shadow-2xl shadow-blue-200 relative overflow-hidden flex flex-col scale-100 md:scale-105 order-1">
                     <div
                         class="absolute top-6 right-[-35px] bg-bizu-blue text-white text-[9px] sm:text-[10px] font-bold px-8 sm:px-10 py-1 rotate-45 uppercase">
                         Mais Popular</div>
@@ -587,6 +618,40 @@
                     <a href="https://hub.la/r/bizu-app" target="_blank"
                         class="w-full bg-bizu-blue text-white font-bold py-3.5 sm:py-4 rounded-xl sm:rounded-2xl hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/30 text-center text-sm sm:text-base">Assinar
                         Agora</a>
+                </div>
+
+                <!-- Free Trial Plan -->
+                <div
+                    class="p-8 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-white border-2 border-slate-100 hover:border-bizu-blue transition-all flex flex-col group order-2">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-2">Teste Grátis</h3>
+                    <div class="text-3xl sm:text-4xl font-extrabold mb-6">Grátis<span
+                            class="text-base sm:text-lg text-slate-400 font-normal"> / 3 dias</span></div>
+                    <ul class="space-y-3 sm:space-y-4 mb-8 sm:mb-10 flex-grow text-sm sm:text-base">
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <i data-lucide="message-square" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Mentor IA
+                            Ilimitado
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <i data-lucide="book-open" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Biblioteca de
+                            Materiais
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <i data-lucide="zap" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Treinar Questões e
+                            Simulados
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <i data-lucide="calendar" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Rotina e
+                            Cronograma
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-600">
+                            <i data-lucide="radar" class="text-bizu-blue w-4 h-4 sm:w-5 sm:h-5"></i> Radar de Concursos
+                            2026
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/556193357433?text=Oi,%20quero%20o%20acesso%20imediato%20ao%20Bizu%20com%203%20dias%20gr%C3%A1tis"
+                        target="_blank"
+                        class="w-full border-2 border-bizu-blue text-bizu-blue font-bold py-3.5 sm:py-4 rounded-xl sm:rounded-2xl hover:bg-blue-50 transition-all text-center text-sm sm:text-base">Começar
+                        Teste Grátis</a>
                 </div>
             </div>
         </div>
@@ -876,6 +941,63 @@
 
         // Initial render
         renderRadar();
+
+        // Video Scroll and Click Logic
+        const video = document.getElementById('demo-video');
+        const videoOverlay = document.getElementById('video-overlay');
+        const playIcon = document.getElementById('play-icon');
+
+        if (video && videoOverlay) {
+            // Audio toggle logic
+            const muteToggle = document.getElementById('mute-toggle');
+            const muteIcon = document.getElementById('mute-icon');
+
+            if (muteToggle) {
+                // Inicia mudo por padrão para permitir autoplay nos navegadores
+                video.muted = true;
+                
+                muteToggle.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Impede de pausar ao clicar no botão
+                    video.muted = !video.muted;
+                    
+                    // Atualiza ícone
+                    if (muteIcon) {
+                        muteIcon.setAttribute('data-lucide', video.muted ? 'volume-x' : 'volume-2');
+                        lucide.createIcons();
+                    }
+                });
+            }
+
+            // Click to toggle play/pause
+            videoOverlay.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    videoOverlay.classList.add('opacity-0', 'pointer-events-none');
+                } else {
+                    video.pause();
+                    videoOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            // Auto play/pause on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play().then(() => {
+                            videoOverlay.classList.add('opacity-0', 'pointer-events-none');
+                        }).catch(error => {
+                            // Autoplay might be blocked by browser if not muted
+                            console.log("Autoplay blocked or waiting for interaction");
+                        });
+                    } else {
+                        video.pause();
+                        videoOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    }
+                });
+            }, { threshold: 0.5 }); // Plays when 50% of video is visible
+
+            observer.observe(video);
+        }
     </script>
 </body>
 
