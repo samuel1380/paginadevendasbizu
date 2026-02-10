@@ -251,8 +251,7 @@
                     <video 
                         id="demo-video"
                         class="absolute inset-0 w-full h-full object-cover" 
-                        poster="assets/img/logo.png"
-                        preload="metadata"
+                        preload="auto"
                         muted
                         loop
                         playsinline>
@@ -260,14 +259,14 @@
                         Seu navegador não suporta a reprodução de vídeos.
                     </video>
                     <!-- Mute/Unmute Toggle -->
-                    <button id="mute-toggle" class="absolute bottom-6 right-6 z-20 bg-black/60 hover:bg-black/80 text-white px-4 py-2 rounded-full backdrop-blur-md transition-all flex items-center gap-2 border border-white/20">
+                    <button id="mute-toggle" class="absolute bottom-6 right-6 z-20 bg-bizu-blue/90 hover:bg-bizu-blue text-white px-4 py-2 rounded-full backdrop-blur-md transition-all flex items-center gap-2 border border-white/20 shadow-lg">
                         <span id="mute-text" class="text-[10px] font-bold uppercase tracking-wider">Ativar Som</span>
                         <i data-lucide="volume-x" class="w-4 h-4" id="mute-icon"></i>
                     </button>
                     <!-- Play Overlay -->
-                    <div id="video-overlay" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-all cursor-pointer">
-                        <div class="w-16 h-16 bg-bizu-blue/90 rounded-full flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
-                            <i data-lucide="play" class="w-8 h-8 text-white fill-current ml-1" id="play-icon"></i>
+                    <div id="video-overlay" class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/30 transition-all cursor-pointer">
+                        <div class="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.3)] transform transition-transform group-hover:scale-110">
+                            <i data-lucide="play" class="w-10 h-10 text-bizu-blue fill-current ml-1" id="play-icon"></i>
                         </div>
                     </div>
                 </div>
